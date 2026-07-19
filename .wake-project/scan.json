@@ -1,0 +1,87 @@
+{
+  "schema_version": "3",
+  "scanned_at": "2026-07-19T18:20:05Z",
+  "duration_ms": 95,
+  "is_git_repo": true,
+  "git": {
+    "root": "/Users/weikejia/CODE/my-agent-group/projects/my-forks/github-hosts",
+    "branch": "master",
+    "remotes": [
+      {
+        "name": "origin",
+        "url": "https://github.com/weikejia123/github-hosts.git",
+        "host": "github.com",
+        "owner": "weikejia123",
+        "repo": "github-hosts"
+      },
+      {
+        "name": "upstream",
+        "url": "https://github.com/maxiaof/github-hosts.git",
+        "host": "github.com",
+        "owner": "maxiaof",
+        "repo": "github-hosts"
+      }
+    ],
+    "head": "47a9b25",
+    "path_prefix": ""
+  },
+  "detected_languages": [
+    {
+      "language": "Java",
+      "files": 4
+    },
+    {
+      "language": "Markdown",
+      "files": 3
+    },
+    {
+      "language": "YAML",
+      "files": 1
+    }
+  ],
+  "manifests": [
+    "pom.xml"
+  ],
+  "key_files": [
+    ".gitignore",
+    "LICENSE",
+    "README-WAKE.md",
+    "README.md",
+    "README_TEMPLATE.md"
+  ],
+  "key_dirs": [
+    ".github",
+    "src"
+  ],
+  "manifests_detail": [],
+  "package_managers": [],
+  "frontends": [],
+  "backends": [],
+  "timeline": {
+    "first_commit_at": "2026-06-10T00:52:50Z",
+    "last_commit_at": "2026-06-10T00:52:50Z",
+    "shallow_clone": true,
+    "last_file_modified_at": "2026-06-21T07:08:45Z",
+    "local_arrival_at": "2026-06-10T09:28:03Z",
+    "local_arrival_source": "git_dir_birthtime",
+    "local_arrival_approximate": true
+  },
+  "totals": {
+    "file_count": 12,
+    "size_bytes": 27878,
+    "size_mb": 0.03,
+    "scope": "excluding_ignored_dirs"
+  },
+  "ignored_dirs": [
+    ".git",
+    ".next",
+    ".venv",
+    ".wake-project",
+    "__pycache__",
+    "build",
+    "dist",
+    "node_modules",
+    "target",
+    "venv"
+  ]
+}
