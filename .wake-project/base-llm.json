@@ -1,0 +1,45 @@
+{
+  "identity": {
+    "type": "cli_tool",
+    "confidence": 0.95,
+    "rationale": "单入口Java可执行JAR，通过命令行运行，核心功能是解析GitHub域名IP并生成hosts文件",
+    "one_liner": "一个用Java 21编写的工具，通过Cloudflare DNS过HTTPS解析GitHub域名最新IP并自动生成hosts文件",
+    "purpose_summary": "该项目是一个解决中国境内用户访问GitHub不稳定问题的CLI工具。它通过Cloudflare的DNS-over-HTTPS接口并发查询GitHub各子域名的当前IP地址，生成标准化的hosts文件内容，并自动更新README.md供用户直接复制使用。用户只需将生成的hosts条目追加到本机/etc/hosts中即可恢复访问。"
+  },
+  "domains": [
+    "网络工具",
+    "开发者基础设施",
+    "DNS解析",
+    "GitHub生态"
+  ],
+  "tech_summary": {
+    "natural": "纯Java 21项目，使用Maven构建可执行JAR包（包含依赖的fat JAR）。无外部第三方依赖，完全基于JDK标准库实现，利用虚拟线程并发查询Cloudflare DNS-over-HTTPS API。",
+    "primary_language": "Java",
+    "runtime": "JRE 21+",
+    "framework": null,
+    "key_dependencies": [
+      "Maven Assembly Plugin"
+    ]
+  },
+  "critical_paths": [
+    {
+      "path": "src/main/java/com/maxiaofa/hosts/RunHosts.java",
+      "role": "程序入口，编排整个DNS查询和文件生成流程的工作流核心",
+      "stability": "high"
+    },
+    {
+      "path": "src/main/java/com/maxiaofa/hosts/constants/GithubUrl.java",
+      "role": "维护需要解析的GitHub域名常量列表，是工具作用域的定义边界",
+      "stability": "moderate"
+    },
+    {
+      "path": "src/main/java/com/maxiaofa/hosts/utils/DnsUtils.java",
+      "role": "封装Cloudflare DNS-over-HTTPS查询逻辑和IPV4解析，是工具的核心业务能力实现",
+      "stability": "high"
+    }
+  ],
+  "_meta": {
+    "schema_version": 1,
+    "analyzed_at": "2026-07-21T08:25:05+0800"
+  }
+}
